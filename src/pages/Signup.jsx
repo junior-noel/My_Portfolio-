@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import supabase from "../lib/supabaseClient";
 
 const Signup = () => {
-    const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -43,15 +42,6 @@ const Signup = () => {
         )}
 
               <form onSubmit={handleSignup} className="flex flex-col gap-4">
-          <input
-            type="User Name"
-            placeholder="User Name"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            className="bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-            required
-          />
-         
           <input
             type="email"
             placeholder="Email"
